@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle(({ theme }) => ({
 export default function StudioPage() {
   return (
     <>
-      <Head>
+      {/* <Head>
         <NextStudioHead favicons={false} />
       </Head>
 
@@ -23,7 +23,7 @@ export default function StudioPage() {
           <GlobalStyle />
           <StudioLayout />
         </StudioProvider>
-      </NextStudio>
+      </NextStudio> */}
     </>
   )
 }
