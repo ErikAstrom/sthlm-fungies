@@ -9,7 +9,7 @@ export default function Home() {
                 <Image src={underConstruction.src} alt="Under konstruktion skylt" height={350} width={350} />
             </div>
             <div className="bg-gray-100 rounded p-5 shadow-sm">
-                <a className="text-2xl hover:text-orange-800 font-bold" href="https://www.instagram.com/sthlm.funghies/">Följ oss på vår instagram!</a>
+                <a className="text-2xl hover:text-orange-800 font-bold" href="https://www.instagram.com/sthlm.funghies/">Klicka här och följ oss på instagram!</a>
                 <p>
                     Välkommen till vår värld av ekologiska gourmet svampar, odlade med passion och omsorg mitt i den urbana miljön.
                 </p>
