@@ -3,6 +3,7 @@ import "../styles/global.css"
 import favicon from "assets/favicon.ico"
 import Header from "components/header"
 import type { Metadata } from 'next'
+import { Roboto } from "next/font/google"
 
 export const metadata: Metadata = {
   title: 'Gourmetsvamp Stockholm',
@@ -10,9 +11,14 @@ export const metadata: Metadata = {
   icons: favicon.src
 };
 
+const inter = Roboto({
+  subsets: ['latin'],
+  weight: ["100", "300", "400", "500", "700", "900"]
+})
+
 export default function Layout({ children }) {
   return (
-    <html>
+    <html className={inter.className}>
       <body className="flex flex-col">
         <Header title="Funghies" />
         {children}
