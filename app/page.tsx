@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function Home() {
     return (
         <main className="h-[80vh] w-full flex flex-col items-center flex-1">
-            <div className="flex flex-col items-center my-5">
+            <div className="flex flex-col items-center my-5 p-5">
                 <h1 className="text-[2rem]">Hemsidan är under konstruktion!</h1>
                 <Image src={underConstruction.src} alt="Under konstruktion skylt" height={350} width={350} />
             </div>
