@@ -1,25 +1,22 @@
-import underConstruction from "assets/underconstruction.jpg"
+"use client"
+
+import InstagramIcon from '@mui/icons-material/Instagram';
+import { Box, Button, Card, Link, Typography } from "@mui/material"
+import funghiesHero from "assets/funghiesHero.png"
+import DiscordForm from "components/discordForm"
 import Image from "next/image"
 
 export default function Home() {
     return (
-        <main className="h-[80vh] w-full flex flex-col items-center flex-1">
-            <div className="flex flex-col items-center my-5 p-5">
-                <h1 className="text-[2rem]">Hemsidan är under konstruktion!</h1>
-                <Image src={underConstruction.src} alt="Under konstruktion skylt" height={350} width={350} />
-            </div>
-            <div className="bg-gray-100 rounded p-5 shadow-sm">
-                <a className="text-2xl hover:text-orange-800 font-bold" href="https://www.instagram.com/sthlm.funghies/">Klicka här och följ oss på instagram!</a>
-                <p>
-                    Välkommen till vår värld av ekologiska gourmet svampar, odlade med passion och omsorg mitt i den urbana miljön.
-                </p>
-                <p>
-                    Vi förser high-end restauranger med de finaste svamparna som naturen har att erbjuda, samtidigt som vi minimerar vår miljöpåverkan och bidrar till en grönare stad.
-                </p>
-                <p>
-                    Njut av den unika smakupplevelsen av våra svampar och följ med på en resa där hållbarhet och lyx möts.
-                </p>
-            </div>
-        </main>
+        <Box component="main" sx={{ height: '100%', width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', mb: 2, width: '100%', height: 350, backgroundPosition: 'center', backgroundSize: 'cover', position: 'relative', backgroundImage: `url(${funghiesHero.src})` }}>
+                {/* <Image src={funghiesHero.src} alt="Under konstruktion skylt" width={350} height={350}/> */}
+            </Box>
+            <Button variant="contained" startIcon={<InstagramIcon />}
+                onClick={() => window.open('https://www.instagram.com/sthlm.funghies/', '_blank')}
+                // tar jag bort href så blir knappens utseende urbuggat - tror det har o göra med discord
+                sx={{ fontWeight: 'bold', appearance: 'button' }} href="#">instagram</Button>
+            <DiscordForm />
+        </Box>
     )
 }

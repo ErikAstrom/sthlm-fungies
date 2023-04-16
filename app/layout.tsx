@@ -1,6 +1,7 @@
 import "../styles/global.css"
 
 import favicon from "assets/favicon.ico"
+import Footer from "components/footer"
 import Header from "components/header"
 import type { Metadata } from 'next'
 import { Roboto } from "next/font/google"
@@ -21,8 +22,10 @@ export default function Layout({ children }) {
     <html className={inter.className}>
       <body className="flex flex-col">
         <Header title="Funghies" />
-        {children}
-        <footer className="bg-gray-300 border-t-2 border-black flex items-center justify-center h-[80px]"></footer>
+        <div className="flex-grow">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   )

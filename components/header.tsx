@@ -1,3 +1,6 @@
+"use client"
+import { Box, Typography } from "@mui/material";
+
 import Icon from "./icon";
 
 interface Props {
@@ -6,11 +9,10 @@ interface Props {
 
 export default function Header({ title }: Props) {
     return (
-        <nav className="h-[80px] w-full border-b-2 border-black flex items-center justify-center bg-gray-300 shadow-md">
+        <Box component="nav" 
+        sx={{height: '80px', width: '100%', borderBottom: '2px solid black', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgray', boxShadow: 'md'}}>
             <Icon color="black" size={32} iconId="mushroom" rounded />
-            <h1 className="text-4xl font-bold px-2"
-                style={{ fontSize: '2.5rem', paddingLeft: '8px' }}
-                >{title}</h1>
-        </nav>
+            <Typography sx={{ fontSize: '2.5rem', paddingLeft: '8px' }}>{title}</Typography>
+        </Box>
     )
 }
