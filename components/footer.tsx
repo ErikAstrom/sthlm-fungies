@@ -1,6 +1,7 @@
 "use client"
 
 import { Box, Typography } from "@mui/material";
+
 import Icon from "./icon";
 
 //TODO move to core and make it more generic, loop over keys
