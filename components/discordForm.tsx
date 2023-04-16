@@ -45,7 +45,7 @@ function initialState() {
 
 export default function DiscordForm() {
     const [contactForm, setContactForm] = useState(initialState());
-    const discordHookUrl = "https://discord.com/api/webhooks/1097181816210849924/xmXHpjd9FL69032oX3RAH_WA142GuaHEAtkLYYOlcMXiQvkDIvgKLreyljcJdNm3R1QF";
+    const discordHookUrl = "https://discord.com/api/webhooks/1097254265354989680/hbrJlqyr-Ij973IkS0_WsGdI2y9eueAb9U0evylKody6kzeKFQtw9sorFV871nyL0lkj";
 
     function handleSubmit(event: any) {
         event.preventDefault();
