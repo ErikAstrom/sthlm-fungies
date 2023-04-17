@@ -45,7 +45,6 @@ function initialState() {
 
 export default function DiscordForm() {
     const [contactForm, setContactForm] = useState(initialState());
-    const discordHookUrl = "https://discord.com/api/webhooks/1097255960323567758/I4Nw8B-BW16yKkvpDv8zG1D03JQUykAoVJP3OlQyCkfA0sZAAebf2hRcCxGo9ibC_ID-";
 
     function handleSubmit(event: any) {
         event.preventDefault();
@@ -71,19 +70,18 @@ export default function DiscordForm() {
         });
 
         if (formValid(contactForm)) {
-            const payload = {
-                content: `**${subject.value}**\n\n Från: ${name.value}\n\ Kontaktuppgifter: ${email.value} \n\ ${message.value}`,
-            };
-            fetch(discordHookUrl, {
+            const body = JSON.stringify({ name: name.value, subject: subject.value, email: email.value, message: message.value });
+            fetch('/api/contactUs', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(payload)
+                body: body
             })
-                .then(res => res.json())
-                .then(data => console.log(data))
-                .catch(err => console.log(err, 'error', JSON.stringify({ name: name.value, subject: subject.value, email: email.value, message: message.value })));
+                .then(res => {
+                    res.status > 200 && res.status < 300 ? console.log('SUCCESS', res.status) : console.log('ERROR', res.status)
+                })
+                .catch(err => console.log('ERROR', err));
             setContactForm(initialState());
         }
     }
