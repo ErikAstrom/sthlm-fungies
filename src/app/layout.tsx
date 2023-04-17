@@ -1,10 +1,10 @@
-import "../styles/global.css"
+import "../styles/global.css";
 
-import favicon from "assets/favicon.ico"
-import Footer from "components/footer"
-import Header from "components/header"
-import type { Metadata } from 'next'
-import { Roboto } from "next/font/google"
+import favicon from "assets/favicon.ico";
+import type { Metadata } from "next";
+import { Roboto } from "next/font/google";
+import Footer from "src/components/footer";
+import Header from "src/components/header";
 
 export const metadata: Metadata = {
   title: 'Gourmetsvamp Stockholm',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 const inter = Roboto({
   subsets: ['latin'],
   weight: ["100", "300", "400", "500", "700", "900"]
-})
+});
 
 export default function Layout({ children }) {
   return (
@@ -28,5 +28,5 @@ export default function Layout({ children }) {
         <Footer />
       </body>
     </html>
-  )
+  );
 }

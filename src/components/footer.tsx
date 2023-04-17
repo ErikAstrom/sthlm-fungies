@@ -8,8 +8,17 @@ import Icon from "./icon";
 export default function Footer() {
 
     return (
-        <Box component="footer" sx={{height: '80px', width: '100%', borderTop: '2px solid black', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'lightgray', boxShadow: 'md'}}>
-            <Box sx={{display: 'flex', alignItems: 'center'}}>
+        <Box component="footer" sx={{
+            height: '80px',
+            width: '100%',
+            borderTop: '2px solid black',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: 'lightgray',
+            boxShadow: 'md'
+        }}>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
                 <Icon color="black" size={32} iconId="mushroom" />
                 <Typography sx={{ fontSize: '2rem', paddingLeft: '4px' }}>Funghies</Typography>
             </Box>
