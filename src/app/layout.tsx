@@ -20,9 +20,9 @@ const inter = Roboto({
 export default function Layout({ children }) {
   return (
     <html className={inter.className}>
-      <body className="flex flex-col">
+      <body style={{display: 'flex', flexDirection: 'column'}}>
         <Header title="Funghies" />
-        <div className="flex-grow">
+        <div style={{flexGrow: 1}}>
           {children}
         </div>
         <Footer />

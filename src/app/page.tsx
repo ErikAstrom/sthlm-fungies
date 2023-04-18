@@ -15,15 +15,11 @@ export default function Home() {
             alignItems: 'center'
         }}>
             <Box sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
                 mb: 2,
                 width: '100%',
                 height: 350,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
-                position: 'relative',
                 backgroundImage: `url(${funghiesHero.src})`
             }}>
                 {/* <Image src={funghiesHero.src} alt="Under konstruktion skylt" width={350} height={350}/> */}
